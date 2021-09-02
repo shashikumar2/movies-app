@@ -1,0 +1,16 @@
+.displayGenres  {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.displayGenres img{
+  height: 150px;
+  width: 250px;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.displayGenres h2{
+  margin-top: 13px;
+  text-decoration: underline;
+}
