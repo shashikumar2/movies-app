@@ -7,8 +7,9 @@ class MoviesList extends React.Component{
         super()
         this.state = {                                  
                movies:[],
-               genres:["Action","Crime","Drama","Animation","Adventure","Family","Thriller","Biography","History","Sci-Fi","Romance","War"]
-        }
+              // genres1:["Action","Crime","Drama","Animation","Adventure","Family","Thriller","Biography","History","Sci-Fi","Romance","War"],
+               genres:[]
+            }
     }
 
     componentDidMount() {
@@ -20,7 +21,25 @@ class MoviesList extends React.Component{
             .then((response)=> {
                console.log("data", response.data.movies)
                const movies=response.data.movies
-               this.setState({movies})
+
+               const genresarray=[]
+               for(const movie of movies){                
+                genresarray.push(movie.genres)
+               }
+               console.log("genresarray", genresarray)
+
+               const  reqGenres1=[]
+                for(const genres of genresarray){                                          
+                    reqGenres1.push(...genres)                                          
+               }
+               console.log('reqGenres',reqGenres1)
+
+               const genres=reqGenres1.filter(function(ele,i){
+                   return reqGenres1.indexOf(ele)==i
+               })
+                              
+               this.setState({movies, genres})
+               console.log('genres',genres)
             })
             .catch((err)=> {
                console.log(err)
