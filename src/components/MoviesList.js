@@ -26,9 +26,7 @@ class MoviesList extends React.Component{
                 genresarray.push(...movie.genres)
                }
               
-               const genres=genresarray.filter(function(ele,i){
-                   return genresarray.indexOf(ele)==i
-               })
+               const genres=genresarray.filter((ele,i)=>genresarray.indexOf(ele)==i)
                console.log('genres',genres)
                               
                this.setState({movies, genres})               
