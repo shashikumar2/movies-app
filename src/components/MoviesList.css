@@ -1,17 +1,15 @@
-.displayGenres  {
+.posters  {
   display: flex;
-  margin-bottom: 30px;
 }
 
-.displayGenres img{
+.posters img{
   height: 150px;
   width: 250px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-right: 20px;
-  margin-left: 0;
+  margin-left: 5px;
 }
 
 .displayGenres h2{
-  margin-top: 13px;
   text-decoration: underline;
 }

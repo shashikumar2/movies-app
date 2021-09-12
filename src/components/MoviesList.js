@@ -50,7 +50,8 @@ class MoviesList extends React.Component{
                             return  (
                                <div className='displayGenres'>
                                 <h2>{genre}</h2>  
-                                <br/><br/><br/>
+                                
+                                <div className='posters'>
                                 {
                                     genreTypeMovies.map(mov=>{
                                         return (
@@ -58,7 +59,8 @@ class MoviesList extends React.Component{
                                         )
                                     })
                                 } 
-                                <br/><br/><br/>
+                                 </div>
+                                <br/>
                                </div>
                               )
                     })
